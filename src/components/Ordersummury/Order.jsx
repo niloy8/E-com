@@ -1,7 +1,7 @@
 import React from 'react';
 import './order.css';
 const Order = ({ cart }) => {
-    console.log(cart);
+    console.log(cart)
     let totalPrice = 0, totalShipping = 0;
 
     for (const product of cart) {
@@ -15,7 +15,7 @@ const Order = ({ cart }) => {
 
             <h3 style={{ textAlign: 'center', paddingTop: '10px' }}>Order Summary</h3>
             <div className="calculation">
-                <h4>Selected item - {cart.length}</h4>
+                <h4>Selected item - {cart.quantity}</h4>
                 <h4>Price - <small>${totalPrice}</small></h4>
                 <h4>Shipping - <small>${totalShipping}</small></h4>
                 <h4>Tax - <small>${tax}</small></h4>
