@@ -9,7 +9,7 @@ const Product = (props) => {
             <div className="discription">
                 <h6>{name}</h6>
                 <h6 style={{ marginTop: '4px' }}>Price: ${price}</h6>
-                <div style={{ marginTop: '30px' }}>
+                <div style={{ marginTop: '10px' }}>
                     <p>Manufacture: {seller}</p>
                     <p>Rattings: {ratings}</p>
                 </div>

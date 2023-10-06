@@ -14,13 +14,14 @@
     /* Body 1 */
     font-family: Lato;
     font-size: 17px;
+    margin-bottom: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.085px;
 }
 
-h3 {
+h4 {
     color: #0E161A;
 
     /* H6 */
