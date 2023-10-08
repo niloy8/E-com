@@ -1,0 +1,12 @@
+.review-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-container .orders {
+    margin-top: 50px;
+    width: 400px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+}
