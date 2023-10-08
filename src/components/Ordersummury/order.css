@@ -5,7 +5,7 @@
     margin-left: 30px;
     position: sticky;
     top: 0;
-    padding: 10px;
+    padding: 15px;
 }
 
 .calculation h4 {
@@ -36,4 +36,31 @@ h4 {
 .calculation {
     margin-top: 50px;
     margin-bottom: 40px;
+}
+
+.clear-cart {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 57px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    background: #FF3030;
+}
+
+.clear-cart span {
+    color: #FFF;
+
+    /* Body 1 */
+    font-family: Lato;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.085px;
+    margin: 5px;
 }

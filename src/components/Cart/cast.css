@@ -10,3 +10,31 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
+
+.btn-link {
+    text-decoration: none;
+}
+
+.btn-review {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 17px;
+    color: white;
+    color: #FFF;
+
+    /* Body 1 */
+    font-family: Lato;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.085px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    background: #F90;
+}
