@@ -1,20 +1,23 @@
 import React from 'react';
-import './login.css';
-const Login = () => {
+import './signup.css';
+import { Link } from 'react-router-dom';
+const Signup = () => {
     return (
         <div>
-            <div className="form-container">
-                <div className="form-title">Login</div>
+            <div className="form-container signup-height">
+                <div className="form-title">SignUp</div>
                 <div className="form-control">
                     <form>
                         <label htmlFor="email">Email</label>
                         <input type="email" name='email' required />
                         <label className='password' htmlFor="passworrd">Passworrd</label>
                         <input type="passworrd" name='passworrd' required />
-                        <input type="submit" className='submit' value="Login" />
+                        <label className='confirm-password' htmlFor="confirm-passworrd">Confirm Passworrd</label>
+                        <input type="confirm-passworrd" name='confirm-passworrd' required />
+                        <input type="submit" className='submit' value="Register" />
                     </form>
                 </div>
-                <p className='new-user'>New to Ema-john? <span className='create-account'>Create New Account</span></p>
+                <p className='new-user'>Already have an account?<Link to="/Login"><span className='create-account'>Login</span></Link></p>
                 <div className="other-login-method">
                     <div className="line"></div>
                     <p className='or'>or</p>
@@ -34,4 +37,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;

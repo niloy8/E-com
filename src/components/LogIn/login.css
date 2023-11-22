@@ -1,0 +1,156 @@
+.form-container {
+    width: 500px;
+    height: 600px;
+    flex-shrink: 0;
+    margin: 50px auto;
+    border-radius: 8px;
+    border: 1px solid #95A0A7;
+    background: #FFF;
+    box-shadow: -12px 10px #FFE0B3;
+
+}
+
+.form-title {
+    color: #2A414F;
+    text-align: center;
+    /* H4 */
+    font-family: Lato;
+    font-size: 35px;
+    margin-top: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.088px;
+}
+
+.form-control label {
+    color: #2A414F;
+    margin: 30px 0px 10px 52px;
+    /* Subtitle 1 */
+    font-family: Lato;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.026px;
+    display: block;
+}
+
+
+.form-control input {
+    width: 415px;
+    margin-left: 42px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #95A0A7;
+}
+
+.password {
+    margin-top: 20px;
+}
+
+.submit {
+    width: 415px;
+    height: 55px;
+    margin-top: 44px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: rgba(255, 153, 0, 0.30);
+    color: #0E161A;
+
+    /* H6 */
+    font-family: Lato;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.032px;
+    border: none;
+}
+
+.submit:hover {
+    background: orange;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.new-user {
+    color: #2A414F;
+    text-align: center;
+    /* Body 2 */
+    margin-top: 10px;
+    font-family: Lato;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.038px;
+
+}
+
+.create-account {
+    color: #F90;
+
+    /* Body 2 */
+    font-family: Lato;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.038px;
+    cursor: pointer;
+}
+
+.line {
+    width: 145px;
+    height: 1px;
+    background: #95A0A7;
+    margin-top: 40px;
+}
+
+.other-login-method {
+    display: flex;
+    justify-content: center;
+}
+
+.or {
+    color: #95A0A7;
+
+    /* Body 1 */
+    font-family: Lato;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.085px;
+    margin: 30px 22px;
+}
+
+.google-login {
+    width: 415px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #95A0A7;
+    background: #FFF;
+    margin: 0 auto;
+    text-align: center;
+    /* Body 1 */
+    color: #2A414F;
+
+    /* Body 1 */
+    font-family: Lato;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.085px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-icon {
+    margin: 0 8px;
+}
