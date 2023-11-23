@@ -1,20 +1,37 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './login.css';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
 const Login = () => {
+    const { logIn } = useContext(AuthContext);
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        logIn(email, password)
+            .then(result => {
+                console.log(result.user);
+                form.reset();
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
     return (
         <div>
             <div className="form-container">
                 <div className="form-title">Login</div>
                 <div className="form-control">
-                    <form>
+                    <form onSubmit={handleLogin}>
                         <label htmlFor="email">Email</label>
                         <input type="email" name='email' required />
-                        <label className='password' htmlFor="passworrd">Passworrd</label>
-                        <input type="passworrd" name='passworrd' required />
+                        <label className='password' htmlFor="password">Passworrd</label>
+                        <input type="password" name='password' required />
                         <input type="submit" className='submit' value="Login" />
                     </form>
                 </div>
-                <p className='new-user'>New to Ema-john? <span className='create-account'>Create New Account</span></p>
+                <p className='new-user'>New to Ema-john? <Link to="/signup"><span className='create-account'>Create New Account</span></Link></p>
                 <div className="other-login-method">
                     <div className="line"></div>
                     <p className='or'>or</p>

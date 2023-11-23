@@ -1,21 +1,48 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './signup.css';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
 const Signup = () => {
+    const [error, setError] = useState('');
+    const { signUp } = useContext(AuthContext);
+    const handleSubmitSignup = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        const confirm_password = form.confirm_password.value;
+        console.log(email, password, confirm_password);
+        setError('');
+        if (password !== confirm_password) {
+            setError("I am not a disco dancer plz provide a matching password");
+            return
+        }
+        signUp(email, password)
+            .then(result => {
+                console.log(result.user);
+
+                form.reset();
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+
+    }
     return (
         <div>
             <div className="form-container signup-height">
                 <div className="form-title">SignUp</div>
                 <div className="form-control">
-                    <form>
+                    <form onSubmit={handleSubmitSignup}>
                         <label htmlFor="email">Email</label>
                         <input type="email" name='email' required />
-                        <label className='password' htmlFor="passworrd">Passworrd</label>
-                        <input type="passworrd" name='passworrd' required />
+                        <label className='password' htmlFor="password">Passworrd</label>
+                        <input type="password" name='password' required />
                         <label className='confirm-password' htmlFor="confirm-passworrd">Confirm Passworrd</label>
-                        <input type="confirm-passworrd" name='confirm-passworrd' required />
+                        <input type="password" name='confirm_password' required />
                         <input type="submit" className='submit' value="Register" />
                     </form>
+                    {error && <p>{error}</p>}
                 </div>
                 <p className='new-user'>Already have an account?<Link to="/Login"><span className='create-account'>Login</span></Link></p>
                 <div className="other-login-method">
